@@ -47,7 +47,7 @@ const SUMMARY_PILLS = [
   "Backend + Frontend",
 ];
 
-export default function Slide9Team() {
+export default function Slide10Team() {
   return (
     <SlideShell ariaLabel="Team credits">
       <Eyebrow>Collaboration</Eyebrow>

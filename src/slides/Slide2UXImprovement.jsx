@@ -3,7 +3,7 @@ import Eyebrow from "../components/Eyebrow";
 import SlideHeading from "../components/SlideHeading";
 import SlideShell from "../components/SlideShell";
 
-export default function Slide2Overview() {
+export default function Slide2UXImprovement() {
   return (
     <SlideShell center ariaLabel="Solution overview">
       <div className="grid w-full items-center gap-8 md:grid-cols-[auto_auto_1fr]">

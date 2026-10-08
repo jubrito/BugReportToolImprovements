@@ -4,7 +4,7 @@ import SlideHeading from "../components/SlideHeading";
 import SlideShell from "../components/SlideShell";
 import Reveal from "../presentation/Reveal";
 
-export default function Slide10DryRun() {
+export default function Slide11DryRun() {
   return (
     <SlideShell center ariaLabel="Dry-run test mode">
       <div className="grid w-full items-center gap-10 md:grid-cols-[1fr_1.2fr]">

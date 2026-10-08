@@ -44,7 +44,7 @@ const CARDS = [
   },
 ];
 
-export default function Slide5Green() {
+export default function Slide6Impact() {
   return (
     <SlideShell ariaLabel="Operational impact">
       <Eyebrow>Operational impact</Eyebrow>

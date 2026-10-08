@@ -34,7 +34,7 @@ const CHECK_ITEMS = [
   },
 ];
 
-export default function Slide3Solution() {
+export default function Slide4Solution() {
   return (
     <SlideShell ariaLabel="The solution">
       <Eyebrow>The Solution</Eyebrow>

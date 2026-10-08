@@ -1,18 +1,18 @@
 import Slide1Title from "./slides/Slide1Title";
-import Slide2Overview from "./slides/Slide2Overview";
-import Slide2Problem from "./slides/Slide2Problem";
-import Slide3Solution from "./slides/Slide3Solution";
-import Slide4Impact from "./slides/Slide4Impact";
-import Slide5Green from "./slides/Slide5Green";
-import Slide6AIBot from "./slides/Slide6AIBot";
-import Slide7Improvements from "./slides/Slide7Improvements";
-import Slide8Reaction from "./slides/Slide8Reaction";
-import Slide9Team from "./slides/Slide9Team";
-import Slide10DryRun from "./slides/Slide10DryRun";
-import Slide11TicketQuality from "./slides/Slide11Loop";
-import Slide12Notifications from "./slides/Slide12Notifications";
-import Slide13StatusNotifications from "./slides/Slide13StatusNotifications";
-import Slide10Closing from "./slides/Slide10Closing";
+import Slide2UXImprovement from "./slides/Slide2UXImprovement";
+import Slide3Problem from "./slides/Slide3Problem";
+import Slide4Solution from "./slides/Slide4Solution";
+import Slide5Efficiency from "./slides/Slide5Efficiency";
+import Slide6Impact from "./slides/Slide6Impact";
+import Slide7MaximizingTriage from "./slides/Slide7MaximizingTriage";
+import Slide8Improvements from "./slides/Slide8Improvements";
+import Slide9Reaction from "./slides/Slide9Reaction";
+import Slide10Team from "./slides/Slide10Team";
+import Slide11DryRun from "./slides/Slide11DryRun";
+import Slide12TicketQuality from "./slides/Slide12TicketQuality";
+import Slide13SlackReplies from "./slides/Slide13SlackReplies";
+import Slide14StatusNotifications from "./slides/Slide14StatusNotifications";
+import Slide15Closing from "./slides/Slide15Closing";
 import {
   PresentationProvider,
   usePresentation,
@@ -23,20 +23,20 @@ import useKeyboardControls from "./presentation/useKeyboardControls";
 
 const SLIDES = [
   { Component: Slide1Title, maxStep: 1 },
-  { Component: Slide2Overview, maxStep: 1 },
-  { Component: Slide2Problem, maxStep: 3 },
-  { Component: Slide3Solution, maxStep: 3 },
-  { Component: Slide4Impact, maxStep: 3 },
-  { Component: Slide5Green, maxStep: 4 },
-  { Component: Slide6AIBot, maxStep: 3 },
-  { Component: Slide7Improvements, maxStep: 4 },
-  { Component: Slide8Reaction, maxStep: 2 },
-  { Component: Slide9Team, maxStep: 4 },
-  { Component: Slide10DryRun, maxStep: 1 },
-  { Component: Slide11TicketQuality, maxStep: 2 },
-  { Component: Slide12Notifications, maxStep: 3 },
-  { Component: Slide13StatusNotifications, maxStep: 3 },
-  { Component: Slide10Closing, maxStep: 2 },
+  { Component: Slide2UXImprovement, maxStep: 1 },
+  { Component: Slide3Problem, maxStep: 3 },
+  { Component: Slide4Solution, maxStep: 3 },
+  { Component: Slide5Efficiency, maxStep: 3 },
+  { Component: Slide6Impact, maxStep: 4 },
+  { Component: Slide7MaximizingTriage, maxStep: 3 },
+  { Component: Slide8Improvements, maxStep: 4 },
+  { Component: Slide9Reaction, maxStep: 2 },
+  { Component: Slide10Team, maxStep: 4 },
+  { Component: Slide11DryRun, maxStep: 1 },
+  { Component: Slide12TicketQuality, maxStep: 2 },
+  { Component: Slide13SlackReplies, maxStep: 3 },
+  { Component: Slide14StatusNotifications, maxStep: 3 },
+  { Component: Slide15Closing, maxStep: 2 },
 ];
 
 const STEP_COUNTS = SLIDES.map((s) => s.maxStep);

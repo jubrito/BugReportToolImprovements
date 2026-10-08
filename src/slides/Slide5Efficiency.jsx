@@ -130,7 +130,7 @@ function StatsRow({ items }) {
   );
 }
 
-export default function Slide4Impact() {
+export default function Slide5Efficiency() {
   return (
     <SlideShell ariaLabel="Impact on triage">
       <Eyebrow>On-Call Experience</Eyebrow>

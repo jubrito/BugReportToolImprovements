@@ -44,7 +44,7 @@ const CARDS = [
   },
 ];
 
-export default function Slide7Improvements() {
+export default function Slide8Improvements() {
   return (
     <SlideShell ariaLabel="Additional improvements">
       <Eyebrow>Additional Improvements</Eyebrow>

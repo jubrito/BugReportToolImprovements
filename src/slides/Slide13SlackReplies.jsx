@@ -1,4 +1,8 @@
 import Eyebrow from "../components/Eyebrow";
+import {
+  AIBotEscalationPostLabel,
+  SectionLabel,
+} from "../components/SlackLabels";
 import SlideHeading from "../components/SlideHeading";
 import SlideShell from "../components/SlideShell";
 import {
@@ -16,27 +20,11 @@ function EscalationRequestLabel() {
   );
 }
 
-function AIBotEscalationPostLabel() {
-  return (
-    <span className="inline-block rounded bg-amber-softer px-1.5 py-0.5 text-sm font-bold uppercase tracking-wide text-amber">
-      AI Bot escalation post
-    </span>
-  );
-}
-
-function SectionLabel({ children }) {
-  return (
-    <p className="mb-1 text-[0.68rem] font-bold uppercase tracking-[0.1em] text-[#9b9da0]">
-      {children}
-    </p>
-  );
-}
-
 function AIBotHeader() {
   return <SlackBotHeader name="AI Bot" time="11:33 AM" />;
 }
 
-export default function Slide12Notifications() {
+export default function Slide13SlackReplies() {
   return (
     <SlideShell ariaLabel="AI Bot Slack notification improvements">
       <Eyebrow>AI Bot Slack Messages</Eyebrow>

@@ -194,7 +194,7 @@ const IMPROVEMENTS = [
   "Reporter assigned",
 ];
 
-export default function Slide11TicketQuality() {
+export default function Slide12TicketQuality() {
   return (
     <SlideShell ariaLabel="AI Bot Jira ticket quality improvement">
       <Eyebrow>AI Bot: Ticket Quality</Eyebrow>

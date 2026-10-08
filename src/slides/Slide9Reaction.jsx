@@ -34,7 +34,7 @@ const ANON_QUOTES = [
   },
 ];
 
-export default function Slide8Reaction() {
+export default function Slide9Reaction() {
   return (
     <SlideShell ariaLabel="Team reaction">
       <Eyebrow>Recognition</Eyebrow>

@@ -71,7 +71,7 @@ function IntakePanel({
   );
 }
 
-export default function Slide6Dragon() {
+export default function Slide7MaximizingTriage() {
   return (
     <SlideShell ariaLabel="AI-assisted triage">
       <Eyebrow>Maximizing the team AI-Assisted Triage</Eyebrow>

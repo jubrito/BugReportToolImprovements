@@ -64,7 +64,7 @@ function MinusIcon() {
   );
 }
 
-export default function Slide2Problem() {
+export default function Slide3Problem() {
   return (
     <SlideShell ariaLabel="The problem">
       <Eyebrow>The Problem</Eyebrow>

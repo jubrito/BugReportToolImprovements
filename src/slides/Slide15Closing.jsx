@@ -10,7 +10,7 @@ const PILLS = [
   { label: "Accessibility", dot: "var(--color-amber)" },
 ];
 
-export default function Slide10Closing() {
+export default function Slide15Closing() {
   return (
     <SlideShell center ariaLabel="Closing">
       <SlideHeading accent="teal">
