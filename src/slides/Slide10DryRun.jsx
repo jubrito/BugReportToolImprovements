@@ -11,18 +11,18 @@ export default function Slide10DryRun() {
         <div className="text-left">
           <Eyebrow>Dry-Run Mode</Eyebrow>
           <SlideHeading accent="green">
-            Test Dragon safely,
+            Test AI Bot safely,
             <br />
             <em>without side effects</em>
           </SlideHeading>
           <p className="text-[1.1rem] leading-[1.65] text-text-muted">
-            Engineers can now trigger the full Dragon pipeline end-to-end
+            Engineers can now trigger the full AI Bot pipeline end-to-end
             without creating real Jira tickets.
           </p>
           <ul className="mt-4 list-none space-y-2.5 p-0">
             {[
               "Form auto-fills with safe test values",
-              "Report skips the main bug channel — Dragon only",
+              "Report skips the main bug channel — AI Bot only",
               "No accidental test tickets in the on-call backlog",
               "Iterate confidently on a critical production workflow",
             ].map((item) => (

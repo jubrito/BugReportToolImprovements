@@ -138,7 +138,7 @@ const BEFORE_DETAILS = [
     value: "Unassigned",
     valueClass: "text-[#6b778c] italic",
   },
-  { label: "Reporter", value: "Dragon" },
+  { label: "Reporter", value: "AI Bot" },
   { label: "Priority", value: "Medium" },
   { label: "Labels", value: "(none)", valueClass: "text-[#6b778c] italic" },
 ];
@@ -175,13 +175,13 @@ const AFTER_DESC = [
 const AFTER_DETAILS = [
   { label: "Status", value: "To Do" },
   { label: "Assignee", value: "On-Call" },
-  { label: "Reporter", value: "Dragon" },
+  { label: "Reporter", value: "AI Bot" },
   {
     label: "Priority",
     value: "High",
     valueClass: "font-semibold text-orange-600",
   },
-  { label: "Labels", value: "dragon-escalation", valueClass: "text-[#0052cc]" },
+  { label: "Labels", value: "AI Bot-escalation", valueClass: "text-[#0052cc]" },
 ];
 
 const IMPROVEMENTS = [
@@ -196,8 +196,8 @@ const IMPROVEMENTS = [
 
 export default function Slide11TicketQuality() {
   return (
-    <SlideShell ariaLabel="Dragon Jira ticket quality improvement">
-      <Eyebrow>Dragon: Ticket Quality</Eyebrow>
+    <SlideShell ariaLabel="AI Bot Jira ticket quality improvement">
+      <Eyebrow>AI Bot: Ticket Quality</Eyebrow>
       <SlideHeading accent="teal">
         From raw Slack markup
         <br />

@@ -11,7 +11,7 @@ const NORMAL_DATA = {
   stakeholders: ["Studio", "Media Streaming"],
   recurrence: "Has happened occasionally",
   additionalDetails:
-    "Started after the latest deploy. Steps to reproduce: class library → open SCB.",
+    "Started after the latest deploy. Steps to reproduce: class library → open class tool.",
 };
 
 const TEST_DATA = {
@@ -465,7 +465,7 @@ function MuiSwitch({ checked, onToggle }) {
       <span style={{ fontSize: "0.875rem", color: "rgba(0,0,0,0.87)" }}>
         Test mode
       </span>
-      <HintIcon title="Enabling test mode will replace all fields with test data which can be modified when needed. If you send the report with this option enabled, it will skip the main bug reports channel and post to the Dragon channel directly." />
+      <HintIcon title="Enabling test mode will replace all fields with test data which can be modified when needed. If you send the report with this option enabled, it will skip the main bug reports channel and post to the AI Bot channel directly." />
     </label>
   );
 }
@@ -888,7 +888,7 @@ export default function BugReportFormMock({
           }}
         >
           {isDryRun
-            ? "[Test mode] Report not sent to #TEAM-bug-reports — sent to #TEAM-dragon-eng only."
+            ? "[Test mode] Report not sent to #TEAM-bug-reports — sent to #TEAM-AI Bot-eng only."
             : 'By clicking "Send Report", your report will be sent to the appropriate slack channel including a screen recording link.'}
         </p>
         <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
@@ -932,7 +932,7 @@ export default function BugReportFormMock({
             onMouseEnter={(e) => (e.target.style.backgroundColor = "#1565c0")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#1976d2")}
           >
-            Send Report{isDryRun ? " to the Dragon channel" : ""}
+            Send Report{isDryRun ? " to the AI Bot channel" : ""}
           </button>
         </div>
       </div>

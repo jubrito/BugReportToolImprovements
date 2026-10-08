@@ -29,7 +29,7 @@ const ANON_QUOTES = [
     className: "basis-[31.5%]",
   },
   {
-    text: "Congrats for brainstorming better approach for bug report mirroring in dragon",
+    text: "Congrats for brainstorming better approach for bug report mirroring in AI Bot",
     className: "basis-[38%]",
   },
 ];

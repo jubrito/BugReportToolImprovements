@@ -16,10 +16,10 @@ function EscalationRequestLabel() {
   );
 }
 
-function DragonEscalationPostLabel() {
+function AIBotEscalationPostLabel() {
   return (
     <span className="inline-block rounded bg-amber-softer px-1.5 py-0.5 text-sm font-bold uppercase tracking-wide text-amber">
-      Dragon escalation post
+      AI Bot escalation post
     </span>
   );
 }
@@ -32,20 +32,14 @@ function SectionLabel({ children }) {
   );
 }
 
-function DragonHeader() {
-  return (
-    <SlackBotHeader
-      name="Dragon AI Bot"
-      time="11:33 AM"
-      src="dragon-slack-icon.jpg"
-    />
-  );
+function AIBotHeader() {
+  return <SlackBotHeader name="AI Bot" time="11:33 AM" />;
 }
 
 export default function Slide12Notifications() {
   return (
-    <SlideShell ariaLabel="Dragon Slack notification improvements">
-      <Eyebrow>Dragon Slack Messages</Eyebrow>
+    <SlideShell ariaLabel="AI Bot Slack notification improvements">
+      <Eyebrow>AI Bot Slack Messages</Eyebrow>
       <SlideHeading accent="amber">
         Improving Slack notifications during
         <br />
@@ -56,7 +50,7 @@ export default function Slide12Notifications() {
         {/* Thread messages column */}
         <div className="flex flex-col gap-3">
           <SectionLabel>
-            <EscalationRequestLabel /> Reply to Dragon AI Channel post
+            <EscalationRequestLabel /> Reply to AI Bot AI Channel post
           </SectionLabel>
 
           {/* After thread */}
@@ -65,11 +59,11 @@ export default function Slide12Notifications() {
               <div className="flex flex-col gap-2">
                 {/* Ack (new) */}
                 <SlackCardShell>
-                  <DragonHeader />
+                  <AIBotHeader />
                   <div className="text-[#d1d2d3]">
                     <p className="text-white mb-2 flex items-start">
                       <img
-                        src={`${import.meta.env.BASE_URL}dragon-fire-icon.gif`}
+                        src={`${import.meta.env.BASE_URL}astronaut.gif`}
                         alt=""
                         aria-hidden="true"
                         width={20}
@@ -122,11 +116,11 @@ export default function Slide12Notifications() {
 
                 {/* Success reply */}
                 <SlackCardShell>
-                  <DragonHeader />
+                  <AIBotHeader />
                   <div className="text-[#d1d2d3] flex flex-col gap-1">
                     <p className="text-white flex items-start">
                       <img
-                        src={`${import.meta.env.BASE_URL}dragon-fire-icon.gif`}
+                        src={`${import.meta.env.BASE_URL}astronaut.gif`}
                         alt=""
                         aria-hidden="true"
                         width={20}
@@ -151,7 +145,7 @@ export default function Slide12Notifications() {
                       <li className="ml-4">
                         <p className="text-[0.8rem]">
                           <span className="font-bold text-teal underline">
-                            Dragon escalation post
+                            AI Bot escalation post
                           </span>
                         </p>
                       </li>
@@ -166,18 +160,18 @@ export default function Slide12Notifications() {
         {/* Eng channel post column */}
         <div className="flex flex-col gap-3">
           <SectionLabel>
-            <DragonEscalationPostLabel /> Post to Dragon AI Channel
+            <AIBotEscalationPostLabel /> Post to AI Bot AI Channel
           </SectionLabel>
 
           {/* After eng post */}
           <Reveal step={2}>
             <div className="flex flex-col gap-2">
               <SlackCardShell>
-                <DragonHeader />
+                <AIBotHeader />
                 <div className="text-[#d1d2d3]">
                   <p className="mb-2 font-bold text-white flex items-start">
                     <img
-                      src={`${import.meta.env.BASE_URL}dragon-icon.png`}
+                      src={`${import.meta.env.BASE_URL}david-clode.jpg`}
                       alt=""
                       aria-hidden="true"
                       width={20}
@@ -202,7 +196,7 @@ export default function Slide12Notifications() {
                     <li className="ml-4">
                       <p className="text-[0.82rem]">
                         <span className="font-bold text-[#ececed]">
-                          Dragon slack thread:
+                          AI Bot slack thread:
                         </span>{" "}
                         <span className="text-teal underline">
                           Bug report details

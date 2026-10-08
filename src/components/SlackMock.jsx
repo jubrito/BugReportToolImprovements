@@ -14,7 +14,7 @@ const REPLY_ROWS = [
   ["Recurrence", "Is happening repeatedly"],
   [
     "Additional details",
-    "Started after the deploy. Steps to reproduce: class library → SCB.",
+    "Started after the deploy. Steps to reproduce: class library → class tool.",
   ],
 ];
 
