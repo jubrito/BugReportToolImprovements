@@ -35,7 +35,8 @@ export default function Slide10Closing() {
 
       <Reveal step={2}>
         <p className="text-[0.85rem] text-text-muted">
-          Juliana Witzke · Fabio Pinto · Paulo Calixto
+          <span className="font-bold">Coming soon:</span> Automated AI-powered
+          triage and prioritization
         </p>
       </Reveal>
     </SlideShell>
