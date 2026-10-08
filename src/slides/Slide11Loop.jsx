@@ -95,7 +95,7 @@ function JiraTicket({ issueKey, summary, descriptionRows, details, labelId }) {
 }
 
 const BEFORE_DESC = [
-  { text: "**User:** juliana.brito@onepeloton.com", mono: true },
+  { text: "**User:** juliana.brito@onecompany.com", mono: true },
   { text: "**Platform:** COSMOS", mono: true },
   { text: "**Created:** 2026-08-25T19:59:40Z", mono: true },
   { text: "" },
@@ -104,12 +104,12 @@ const BEFORE_DESC = [
   { text: "" },
   { text: "**Conversation Transcript:**", mono: true },
   { text: "[2026-08-25T19:59:40Z] BOT:", mono: true },
-  { text: "<https://cosmos-stage.onepeloton.com/|*Cosmos Link*>", mono: true },
+  { text: "<https://cosmos-stage.onecompany.com/|*Cosmos Link*>", mono: true },
   { text: "*Current vs. expected:* Testing", mono: true },
   { text: "*On Call:* <@U06SNC3UARZ>", mono: true },
   { text: "" },
   {
-    text: "**Slack Thread:** https://peloton.slack.com/archives/C0ALK2GKDB8/p1787...",
+    text: "**Slack Thread:** https://company.slack.com/archives/C0ALK2GKDB8/p1787...",
     mono: true,
   },
 ];
@@ -134,10 +134,10 @@ const AFTER_DESC = [
   { text: "Datadog RUM Link · Created Sep 10, 2026 11:41 am", muted: true },
   { text: "Original #cosmos-bug-reports report", muted: true },
   { text: "" },
-  { text: "User: @Juliana Brito (juliana.brito@onepeloton.com)" },
-  { text: "Engineer on-call: @Paulo Calixto (paulo.calixto@onepeloton.com)" },
+  { text: "User: @Juliana Brito (juliana.brito@onecompany.com)" },
+  { text: "Engineer on-call: @Paulo Calixto (paulo.calixto@onecompany.com)" },
   {
-    text: "Manually escalated by: @Juliana Brito (juliana.brito@onepeloton.com)",
+    text: "Manually escalated by: @Juliana Brito (juliana.brito@onecompany.com)",
   },
   { text: "" },
   { text: "Issue reported", muted: true },
@@ -217,7 +217,7 @@ export default function Slide11TicketQuality() {
             { label: "Identities", from: "email only", to: "Name (email)" },
             {
               label: "Links",
-              from: "peloton.slack.com (broken)",
+              from: "company.slack.com (broken)",
               to: "enterprise URL (working)",
             },
             {

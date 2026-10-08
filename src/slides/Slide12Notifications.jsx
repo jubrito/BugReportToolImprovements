@@ -196,7 +196,7 @@ export default function Slide12Notifications() {
                         <span className="font-bold text-[#ececed]">
                           Reporter:
                         </span>{" "}
-                        Reporter Name (reporter@onepeloton.com)
+                        Reporter Name (reporter@onecompany.com)
                       </p>
                     </li>
                     <li className="ml-4">

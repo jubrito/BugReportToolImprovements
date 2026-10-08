@@ -1,4 +1,8 @@
-import { SlackBotHeader, SlackCardShell, SlackThreadDivider } from "./SlackCard";
+import {
+  SlackBotHeader,
+  SlackCardShell,
+  SlackThreadDivider,
+} from "./SlackCard";
 
 const REPLY_ROWS = [
   [
@@ -22,14 +26,16 @@ export default function SlackMock() {
         <div className="text-[#d1d2d3]">
           <span className="font-bold text-green underline">Team Link</span>
           <br />
-          <span className="font-bold text-green underline">Datadog RUM Link</span>
+          <span className="font-bold text-green underline">
+            Datadog RUM Link
+          </span>
           <br />
           <span className="font-bold text-white">Environment:</span> PRODUCTION
           <br />
           <span className="font-bold text-white">Path:</span> /programs
           <br />
           <span className="font-bold text-white">User:</span>{" "}
-          reporter@onepeloton.com
+          reporter@onecompany.com
           <br />
           <span className="font-bold text-white">
             Current vs. expected behavior:
@@ -37,7 +43,9 @@ export default function SlackMock() {
           The Segment Control Board should show all segments, but the list is
           empty.
           <br />
-          <span className="font-bold text-white">Business Hours On Call:</span>{" "}
+          <span className="font-bold text-white">
+            Business Hours On Call:
+          </span>{" "}
           @Juliana
         </div>
       </SlackCardShell>
