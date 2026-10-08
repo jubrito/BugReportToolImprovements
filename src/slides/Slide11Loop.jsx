@@ -96,7 +96,7 @@ function JiraTicket({ issueKey, summary, descriptionRows, details, labelId }) {
 
 const BEFORE_DESC = [
   { text: "**User:** juliana.brito@onecompany.com", mono: true },
-  { text: "**Platform:** COSMOS", mono: true },
+  { text: "**Platform:** TEAM", mono: true },
   { text: "**Created:** 2026-08-25T19:59:40Z", mono: true },
   { text: "" },
   { text: "**AI Triage Reasoning:**", mono: true },
@@ -104,7 +104,7 @@ const BEFORE_DESC = [
   { text: "" },
   { text: "**Conversation Transcript:**", mono: true },
   { text: "[2026-08-25T19:59:40Z] BOT:", mono: true },
-  { text: "<https://cosmos-stage.onecompany.com/|*Cosmos Link*>", mono: true },
+  { text: "<https://TEAM-stage.onecompany.com/|*TEAM Link*>", mono: true },
   { text: "*Current vs. expected:* Testing", mono: true },
   { text: "*On Call:* <@U06SNC3UARZ>", mono: true },
   { text: "" },
@@ -132,7 +132,7 @@ const AFTER_DESC = [
   { text: "" },
   { text: "Report details", muted: true },
   { text: "Datadog RUM Link · Created Sep 10, 2026 11:41 am", muted: true },
-  { text: "Original #cosmos-bug-reports report", muted: true },
+  { text: "Original #TEAM-bug-reports report", muted: true },
   { text: "" },
   { text: "User: @Juliana Brito (juliana.brito@onecompany.com)" },
   { text: "Engineer on-call: @Paulo Calixto (paulo.calixto@onecompany.com)" },
@@ -182,7 +182,7 @@ export default function Slide11TicketQuality() {
           <Reveal step={1} className="h-full">
             <JiraTicket
               issueKey="JIRA-3437"
-              summary="[COSMOS] @U0AM4H9CEA1 bug"
+              summary="[TEAM] @U0AM4H9CEA1 bug"
               descriptionRows={BEFORE_DESC}
               details={BEFORE_DETAILS}
               labelId="s11-before"
@@ -211,7 +211,7 @@ export default function Slide11TicketQuality() {
           {[
             {
               label: "Title",
-              from: "[COSMOS] @SlackUserId bug",
+              from: "[TEAM] @SlackUserId bug",
               to: "[on-call] AI-generated summary",
             },
             { label: "Identities", from: "email only", to: "Name (email)" },

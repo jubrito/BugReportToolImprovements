@@ -179,7 +179,7 @@ function ToggleGroup({ options, value, onChange, labelFn, thin }) {
   );
 }
 
-// Blue info tooltip icon matching CosmosToolTip.
+// Blue info tooltip icon matching TEAMToolTip.
 // Uses a portal so the tooltip renders at document root, escaping any overflow:hidden container.
 function HintIcon({ title }) {
   const iconRef = useRef(null);
@@ -888,7 +888,7 @@ export default function BugReportFormMock({
           }}
         >
           {isDryRun
-            ? "[Test mode] Report not sent to #cosmos-bug-reports — sent to #cosmos-dragon-eng only."
+            ? "[Test mode] Report not sent to #TEAM-bug-reports — sent to #TEAM-dragon-eng only."
             : 'By clicking "Send Report", your report will be sent to the appropriate slack channel including a screen recording link.'}
         </p>
         <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>
