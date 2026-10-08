@@ -11,6 +11,7 @@ import Slide9Team from "./slides/Slide9Team";
 import Slide10DryRun from "./slides/Slide10DryRun";
 import Slide11TicketQuality from "./slides/Slide11Loop";
 import Slide12Notifications from "./slides/Slide12Notifications";
+import Slide13StatusNotifications from "./slides/Slide13StatusNotifications";
 import Slide10Closing from "./slides/Slide10Closing";
 import {
   PresentationProvider,
@@ -34,6 +35,7 @@ const SLIDES = [
   { Component: Slide10DryRun, maxStep: 1 },
   { Component: Slide11TicketQuality, maxStep: 2 },
   { Component: Slide12Notifications, maxStep: 3 },
+  { Component: Slide13StatusNotifications, maxStep: 3 },
   { Component: Slide10Closing, maxStep: 2 },
 ];
 

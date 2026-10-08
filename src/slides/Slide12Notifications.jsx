@@ -50,7 +50,7 @@ export default function Slide12Notifications() {
         {/* Thread messages column */}
         <div className="flex flex-col gap-3">
           <SectionLabel>
-            <EscalationRequestLabel /> Reply to AI Bot AI Channel post
+            <EscalationRequestLabel /> Reply to AI Bot Channel post
           </SectionLabel>
 
           {/* After thread */}
@@ -160,7 +160,7 @@ export default function Slide12Notifications() {
         {/* Eng channel post column */}
         <div className="flex flex-col gap-3">
           <SectionLabel>
-            <AIBotEscalationPostLabel /> Post to AI Bot AI Channel
+            <AIBotEscalationPostLabel /> Post to AI Bot Channel
           </SectionLabel>
 
           {/* After eng post */}
