@@ -4,7 +4,7 @@ import Slide2Problem from "./slides/Slide2Problem";
 import Slide3Solution from "./slides/Slide3Solution";
 import Slide4Impact from "./slides/Slide4Impact";
 import Slide5Green from "./slides/Slide5Green";
-import Slide6Dragon from "./slides/Slide6Dragon";
+import Slide6AIBot from "./slides/Slide6AIBot";
 import Slide7Improvements from "./slides/Slide7Improvements";
 import Slide8Reaction from "./slides/Slide8Reaction";
 import Slide9Team from "./slides/Slide9Team";
@@ -27,7 +27,7 @@ const SLIDES = [
   { Component: Slide3Solution, maxStep: 3 },
   { Component: Slide4Impact, maxStep: 3 },
   { Component: Slide5Green, maxStep: 4 },
-  { Component: Slide6Dragon, maxStep: 3 },
+  { Component: Slide6AIBot, maxStep: 3 },
   { Component: Slide7Improvements, maxStep: 4 },
   { Component: Slide8Reaction, maxStep: 2 },
   { Component: Slide9Team, maxStep: 4 },
