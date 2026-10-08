@@ -207,7 +207,7 @@ export default function Slide11TicketQuality() {
         <em>to readable Jira tickets</em>
       </SlideHeading>
 
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+      <div className="grid w-full items-stretch gap-4 grid-cols-[1fr_auto_1fr]">
         <div className="flex flex-col gap-1.5">
           <p className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-pink">
             Before — JIRA-3437
@@ -223,6 +223,13 @@ export default function Slide11TicketQuality() {
             />
           </Reveal>
         </div>
+
+        <span
+          aria-hidden="true"
+          className="flex items-center justify-center text-[2.5rem] font-bold text-text-muted"
+        >
+          →
+        </span>
 
         <div className="flex flex-col gap-1.5">
           <p className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-teal">
@@ -240,41 +247,6 @@ export default function Slide11TicketQuality() {
           </Reveal>
         </div>
       </div>
-
-      <Reveal step={2}>
-        <ul className="mt-3 flex flex-wrap gap-x-8 gap-y-1 list-none p-0 m-0">
-          {[
-            {
-              label: "Title",
-              from: "[TEAM] @SlackUserId bug",
-              to: "[on-call] AI-generated summary",
-            },
-            { label: "Identities", from: "email only", to: "Name (email)" },
-            {
-              label: "Links",
-              from: "company.slack.com (broken)",
-              to: "enterprise URL (working)",
-            },
-            {
-              label: "Metadata",
-              from: "no parent, no labels",
-              to: "Bug Reports EPIC + dragon label",
-            },
-          ].map(({ label, from, to }) => (
-            <li
-              key={label}
-              className="flex items-center gap-1.5 text-[0.78rem]"
-            >
-              <span className="font-semibold text-text">{label}:</span>
-              <span className="text-pink">{from}</span>
-              <span aria-hidden="true" className="text-text-muted">
-                →
-              </span>
-              <span className="text-teal">{to}</span>
-            </li>
-          ))}
-        </ul>
-      </Reveal>
     </SlideShell>
   );
 }
