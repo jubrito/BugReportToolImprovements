@@ -41,7 +41,7 @@ const SLIDES = [
 
 const STEP_COUNTS = SLIDES.map((s) => s.maxStep);
 
-const GITHUB_REPO_URL = "https://github.com/jubrito/BugReportTool";
+const GITHUB_REPO_URL = "https://github.com/jubrito/BugReportToolImprovements";
 
 function AppShell() {
   useKeyboardControls();
