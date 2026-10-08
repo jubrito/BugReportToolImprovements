@@ -171,7 +171,7 @@ export default function Slide12Notifications() {
                 <div className="text-[#d1d2d3]">
                   <p className="mb-2 font-bold text-white flex items-start">
                     <img
-                      src={`${import.meta.env.BASE_URL}david-clode.jpg`}
+                      src={`${import.meta.env.BASE_URL}astronaut.gif`}
                       alt=""
                       aria-hidden="true"
                       width={20}
@@ -181,7 +181,7 @@ export default function Slide12Notifications() {
                       decoding="async"
                     />
                     New Escalation:{" "}
-                    <span className="text-teal underline">JIRA-3585</span>
+                    <span className="ml-1 text-teal underline">JIRA-3585</span>
                     <span className="ml-1">[prod]</span>
                   </p>
                   <ul className="list-disc flex flex-col gap-2">
