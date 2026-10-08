@@ -19,17 +19,6 @@ function groupDescriptionRows(rows) {
   return groups;
 }
 
-function JiraBugBadge() {
-  return (
-    <span
-      aria-hidden="true"
-      className="inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-[3px] bg-red-500 text-[0.5rem] font-bold text-white"
-    >
-      ✕
-    </span>
-  );
-}
-
 function JiraDetailRow({ label, value, valueClass = "text-[#172b4d]" }) {
   return (
     <div className="py-1.5 border-b border-[#ebecf0] last:border-0">
@@ -61,9 +50,6 @@ function JiraTicket({
     >
       {/* Breadcrumb header */}
       <div className="flex items-center gap-1.5 border-b border-[#ebecf0] bg-[#f4f5f7] px-3 py-1.5">
-        <JiraBugBadge />
-        <span className="text-sm text-[#5e6c84]">Projects</span>
-        <span className="text-sm text-[#5e6c84]">/</span>
         <span className="text-sm text-[#0052cc]">{parent}</span>
         <span className="text-sm text-[#5e6c84]">/</span>
         <span className="text-sm font-semibold text-[#5e6c84]">{issueKey}</span>
@@ -160,7 +146,7 @@ const BEFORE_DETAILS = [
 const AFTER_DESC = [
   { text: "Bug report" },
   { text: "" },
-  { text: "Report details", muted: true, listItem: true },
+  { text: "Report details", muted: true, listItem: false },
   {
     text: "Datadog RUM Link · Created Sep 10, 2026 11:41 am",
     muted: true,
@@ -199,11 +185,13 @@ const AFTER_DETAILS = [
 ];
 
 const IMPROVEMENTS = [
-  "AI-generated title",
+  "AI generated summary as the title",
   "Structured sections",
-  "Full report context",
-  "Working links",
+  "Full bug context",
+  "Report details",
   "Bugs EPIC as parent",
+  "Labels to support automations",
+  "Reporter assigned",
 ];
 
 export default function Slide11TicketQuality() {
@@ -216,7 +204,7 @@ export default function Slide11TicketQuality() {
         <em>to readable Jira tickets</em>
       </SlideHeading>
 
-      <div className="grid w-full items-stretch gap-4 grid-cols-[1fr_auto_1fr]">
+      <div className="grid w-full items-stretch gap-x-4 grid-cols-[1fr_auto_1fr_1px_auto]">
         <div className="flex flex-col gap-1.5">
           <p className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-pink">
             Before — JIRA-3437
@@ -254,22 +242,27 @@ export default function Slide11TicketQuality() {
               parent="🎯 Bug Reports EPIC"
             />
           </Reveal>
-          <Reveal step={3}>
-            <ul className="mt-3 flex flex-wrap gap-2 list-none p-0 m-0">
-              {IMPROVEMENTS.map((label) => (
-                <li key={label}>
-                  <Pill
-                    dotColor="var(--color-text)"
-                    textSize="text-xs"
-                    padding="p-1 px-2"
-                  >
-                    {label}
-                  </Pill>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
         </div>
+
+        <div aria-hidden="true" className="self-stretch" />
+
+        <Reveal step={3} className="self-start">
+          <p
+            aria-hidden="true"
+            className="opacity-0 mb-2 text-[0.78rem] font-bold uppercase tracking-[0.1em]"
+          >
+            What improved
+          </p>
+          <ul className="flex flex-col gap-2 list-none p-0 m-0">
+            {IMPROVEMENTS.map((label) => (
+              <li key={label}>
+                <Pill dotColor="var(--color-teal)" padding="p-1 px-2">
+                  {label}
+                </Pill>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </SlideShell>
   );
