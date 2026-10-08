@@ -1,4 +1,5 @@
 import Eyebrow from "../components/Eyebrow";
+import Pill from "../components/Pill";
 import SlideHeading from "../components/SlideHeading";
 import SlideShell from "../components/SlideShell";
 import Reveal from "../presentation/Reveal";
@@ -197,6 +198,14 @@ const AFTER_DETAILS = [
   { label: "Labels", value: "dragon-escalation", valueClass: "text-[#0052cc]" },
 ];
 
+const IMPROVEMENTS = [
+  "AI-generated title",
+  "Structured sections",
+  "Full report context",
+  "Working links",
+  "Bugs EPIC as parent",
+];
+
 export default function Slide11TicketQuality() {
   return (
     <SlideShell ariaLabel="Dragon Jira ticket quality improvement">
@@ -244,6 +253,21 @@ export default function Slide11TicketQuality() {
               labelId="s11-after"
               parent="🎯 Bug Reports EPIC"
             />
+          </Reveal>
+          <Reveal step={3}>
+            <ul className="mt-3 flex flex-wrap gap-2 list-none p-0 m-0">
+              {IMPROVEMENTS.map((label) => (
+                <li key={label}>
+                  <Pill
+                    dotColor="var(--color-text)"
+                    textSize="text-xs"
+                    padding="p-1 px-2"
+                  >
+                    {label}
+                  </Pill>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         </div>
       </div>

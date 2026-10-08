@@ -4,6 +4,9 @@ export default function Pill({
   borderColor,
   textColor,
   children,
+  customClassName,
+  textSize,
+  padding,
 }) {
   const style = {
     borderColor: borderColor || dotColor,
@@ -12,7 +15,7 @@ export default function Pill({
   return (
     <span
       style={style}
-      className="inline-flex items-center gap-2 rounded-full border-[1.5px] bg-black/30 px-4 py-2 text-[0.85rem] font-semibold"
+      className={`inline-flex items-center gap-2 rounded-full border-[1.5px] bg-black/30 ${padding || "px-4 py-2"} ${textSize || "text-[0.85rem]"} font-semibold ${customClassName || ""}`}
     >
       {icon ? (
         <span aria-hidden="true" className="inline-flex">
