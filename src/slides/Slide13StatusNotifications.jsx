@@ -1,11 +1,7 @@
 import Eyebrow from "../components/Eyebrow";
 import SlideHeading from "../components/SlideHeading";
 import SlideShell from "../components/SlideShell";
-import {
-  SlackBotHeader,
-  SlackCardShell,
-  SlackThreadDivider,
-} from "../components/SlackCard";
+import { SlackBotHeader, SlackCardShell } from "../components/SlackCard";
 import Reveal from "../presentation/Reveal";
 
 function AIBotEscalationPostLabel() {
@@ -32,10 +28,21 @@ function AstronautImg() {
       aria-hidden="true"
       width={20}
       height={20}
-      className="h-5 w-5 mr-1 shrink-0 rounded-md inline"
+      className="mr-1 inline h-5 w-5 shrink-0 rounded-md"
       loading="lazy"
       decoding="async"
     />
+  );
+}
+
+function FlowArrow() {
+  return (
+    <span
+      aria-hidden="true"
+      className="flex shrink-0 items-center text-2xl font-bold text-text-muted"
+    >
+      →
+    </span>
   );
 }
 
@@ -47,41 +54,56 @@ export default function Slide13StatusNotifications() {
         Notifying when a ticket
         <br />
         <em>status changes</em>
+        <p className="text-[1.1rem] font-normal mt-2">
+          Every time a ticket is completed, the AI Bot informs engineers on the
+          Slack channel and re-notifies them if the status changes again,
+          keeping everyone up-to-date.
+        </p>
       </SlideHeading>
 
-      <div className="flex max-w-2xl flex-col gap-3">
+      <div className="w-full flex flex-col gap-3">
         <SectionLabel>
           <AIBotEscalationPostLabel /> Post to AI Bot Channel
         </SectionLabel>
 
-        <Reveal step={1}>
-          <SlackCardShell>
-            <SlackBotHeader name="AI Bot" time="11:33 AM" />
-            <div className="text-[#d1d2d3]">
-              <p className="mb-2 flex items-start font-bold text-white">
-                <img
-                  src={`${import.meta.env.BASE_URL}astronaut.gif`}
-                  alt=""
-                  aria-hidden="true"
-                  width={20}
-                  height={20}
-                  className="mr-1 inline h-5 w-5 shrink-0 rounded-md"
-                  loading="lazy"
-                  decoding="async"
-                />
-                New Escalation:{" "}
-                <span className="ml-1 text-teal underline">JIRA-3585</span>
-                <span className="ml-1">[prod]</span>
-              </p>
-            </div>
-            [...]
-          </SlackCardShell>
-        </Reveal>
+        <div className="flex w-full items-stretch gap-3">
+          <Reveal step={1} className="flex min-w-0 flex-1">
+            <SlackCardShell className="flex-1">
+              <SlackBotHeader name="AI Bot" time="11:33 AM" />
+              <div className="text-[#d1d2d3]">
+                <p className="mb-2 flex items-start font-bold text-white">
+                  <img
+                    src={`${import.meta.env.BASE_URL}david-clode.jpg`}
+                    alt=""
+                    aria-hidden="true"
+                    width={20}
+                    height={20}
+                    className="mr-1 inline h-5 w-5 shrink-0 rounded-md"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  New Escalation:{" "}
+                  <span className="ml-1 text-teal underline">JIRA-3585</span>
+                  <span className="ml-1">[prod]</span>
+                </p>
+                <ul className="flex list-disc flex-col gap-2">
+                  <li className="ml-4">
+                    <p className="text-[0.82rem]">
+                      <span className="font-bold text-[#ececed]">
+                        Reporter:
+                      </span>{" "}
+                      Reporter Name (reporter@onecompany.com)
+                    </p>
+                  </li>
+                </ul>
+                [...]
+              </div>
+            </SlackCardShell>
+          </Reveal>
 
-        <Reveal step={2}>
-          <div className="flex flex-col gap-2">
-            <SlackThreadDivider replyCount={1} />
-            <SlackCardShell>
+          <Reveal step={2} className="flex min-w-0 flex-1 items-stretch gap-3">
+            <FlowArrow />
+            <SlackCardShell className="flex-1">
               <SlackBotHeader name="AI Bot" time="2:18 PM" />
               <div className="text-[#d1d2d3]">
                 <p className="mb-1 flex items-center text-white">
@@ -101,29 +123,32 @@ export default function Slide13StatusNotifications() {
                 </p>
               </div>
             </SlackCardShell>
-          </div>
-        </Reveal>
+          </Reveal>
 
-        <Reveal step={3}>
-          <SlackCardShell>
-            <SlackBotHeader name="AI Bot" time="2:33 PM" />
-            <div className="text-[#d1d2d3]">
-              <p className="mb-1 flex items-center text-white">
-                <AstronautImg />
-                <span className="font-bold">
-                  [stage] The ticket was closed!
-                </span>
-              </p>
-              <p className="text-[0.8rem]">
-                <span className="font-bold text-teal underline">JIRA-3585</span>{" "}
-                was marked as WILL NOT DO ☑️
-              </p>
-              <p className="mt-1 text-[0.8rem]">
-                @Engineer Notify stakeholders about the updated status
-              </p>
-            </div>
-          </SlackCardShell>
-        </Reveal>
+          <Reveal step={3} className="flex min-w-0 flex-1 items-stretch gap-3">
+            <FlowArrow />
+            <SlackCardShell className="flex-1">
+              <SlackBotHeader name="AI Bot" time="2:33 PM" />
+              <div className="text-[#d1d2d3]">
+                <p className="mb-1 flex items-center text-white">
+                  <AstronautImg />
+                  <span className="font-bold">
+                    [stage] The ticket was closed!
+                  </span>
+                </p>
+                <p className="text-[0.8rem]">
+                  <span className="font-bold text-teal underline">
+                    JIRA-3585
+                  </span>{" "}
+                  was marked as WILL NOT DO ☑️
+                </p>
+                <p className="mt-1 text-[0.8rem]">
+                  @Engineer Notify stakeholders about the updated status
+                </p>
+              </div>
+            </SlackCardShell>
+          </Reveal>
+        </div>
       </div>
     </SlideShell>
   );
