@@ -3,6 +3,21 @@ import SlideHeading from "../components/SlideHeading";
 import SlideShell from "../components/SlideShell";
 import Reveal from "../presentation/Reveal";
 
+function groupDescriptionRows(rows) {
+  const groups = [];
+  let i = 0;
+  while (i < rows.length) {
+    if (rows[i].listItem) {
+      const items = [];
+      while (i < rows.length && rows[i].listItem) items.push(rows[i++]);
+      groups.push({ type: "list", items });
+    } else {
+      groups.push({ type: "paragraph", row: rows[i++] });
+    }
+  }
+  return groups;
+}
+
 function JiraBugBadge() {
   return (
     <span
@@ -17,7 +32,7 @@ function JiraBugBadge() {
 function JiraDetailRow({ label, value, valueClass = "text-[#172b4d]" }) {
   return (
     <div className="py-1.5 border-b border-[#ebecf0] last:border-0">
-      <p className="text-[0.65rem] font-semibold uppercase tracking-wide text-[#6b778c]">
+      <p className="text-xs font-semibold uppercase tracking-wide text-[#6b778c]">
         {label}
       </p>
       <p className={`mt-0.5 text-[0.72rem] leading-[1.4] ${valueClass}`}>
@@ -27,11 +42,18 @@ function JiraDetailRow({ label, value, valueClass = "text-[#172b4d]" }) {
   );
 }
 
-function JiraTicket({ issueKey, summary, descriptionRows, details, labelId }) {
+function JiraTicket({
+  issueKey,
+  summary,
+  descriptionRows,
+  details,
+  labelId,
+  parent,
+}) {
   return (
     <article
       aria-labelledby={labelId}
-      className="h-full overflow-hidden rounded bg-white text-[#172b4d]"
+      className="h-full w-full min-w-full overflow-hidden rounded bg-white text-[#172b4d]"
       style={{
         boxShadow: "0 1px 3px rgb(9 30 66/.12), 0 0 0 1px rgb(9 30 66/.1)",
       }}
@@ -39,13 +61,11 @@ function JiraTicket({ issueKey, summary, descriptionRows, details, labelId }) {
       {/* Breadcrumb header */}
       <div className="flex items-center gap-1.5 border-b border-[#ebecf0] bg-[#f4f5f7] px-3 py-1.5">
         <JiraBugBadge />
-        <span className="text-[0.65rem] text-[#5e6c84]">Projects</span>
-        <span className="text-[0.65rem] text-[#5e6c84]">/</span>
-        <span className="text-[0.65rem] text-[#0052cc]">Bug Reports</span>
-        <span className="text-[0.65rem] text-[#5e6c84]">/</span>
-        <span className="text-[0.65rem] font-semibold text-[#5e6c84]">
-          {issueKey}
-        </span>
+        <span className="text-sm text-[#5e6c84]">Projects</span>
+        <span className="text-sm text-[#5e6c84]">/</span>
+        <span className="text-sm text-[#0052cc]">{parent}</span>
+        <span className="text-sm text-[#5e6c84]">/</span>
+        <span className="text-sm font-semibold text-[#5e6c84]">{issueKey}</span>
       </div>
 
       <div className="flex h-full">
@@ -57,24 +77,34 @@ function JiraTicket({ issueKey, summary, descriptionRows, details, labelId }) {
           >
             {summary}
           </h3>
-          <p className="mb-1 text-[0.65rem] font-semibold text-[#6b778c] uppercase tracking-wide">
+          <p className="mb-1 text-xs font-semibold text-[#6b778c] uppercase tracking-wide">
             Description
           </p>
           <div className="space-y-0.5 text-[0.7rem] leading-[1.55] text-[#172b4d]">
-            {descriptionRows.map((row, i) => (
-              <p
-                key={i}
-                className={
-                  row.muted
-                    ? "text-[#6b778c]"
-                    : row.mono
-                      ? "font-mono text-[0.65rem] text-[#888]"
-                      : ""
-                }
-              >
-                {row.text}
-              </p>
-            ))}
+            {groupDescriptionRows(descriptionRows).map((group, i) =>
+              group.type === "list" ? (
+                <ul key={i} className="list-disc pl-4 space-y-0.5 my-0">
+                  {group.items.map((item, j) => (
+                    <li key={j} className={item.muted ? "text-[#6b778c]" : ""}>
+                      {item.text}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p
+                  key={i}
+                  className={
+                    group.row.muted
+                      ? "text-[#6b778c]"
+                      : group.row.mono
+                        ? "font-mono text-xs text-[#888]"
+                        : ""
+                  }
+                >
+                  {group.row.text}
+                </p>
+              ),
+            )}
           </div>
         </div>
 
@@ -95,18 +125,18 @@ function JiraTicket({ issueKey, summary, descriptionRows, details, labelId }) {
 }
 
 const BEFORE_DESC = [
-  { text: "**User:** juliana.brito@onecompany.com", mono: true },
-  { text: "**Platform:** TEAM", mono: true },
+  { text: "**User:** user@onecompany.com", mono: true },
+  { text: "**Platform:** NAME", mono: true },
   { text: "**Created:** 2026-08-25T19:59:40Z", mono: true },
   { text: "" },
   { text: "**AI Triage Reasoning:**", mono: true },
-  { text: "Manually escalated by engineer <@U06SNC3UARZ>", mono: true },
+  { text: "Manually escalated by engineer @SLACK_USER", mono: true },
   { text: "" },
   { text: "**Conversation Transcript:**", mono: true },
   { text: "[2026-08-25T19:59:40Z] BOT:", mono: true },
-  { text: "<https://TEAM-stage.onecompany.com/|*TEAM Link*>", mono: true },
-  { text: "*Current vs. expected:* Testing", mono: true },
-  { text: "*On Call:* <@U06SNC3UARZ>", mono: true },
+  { text: "<https://TEAM-stage.company.com/|*TEAM Link*>", mono: true },
+  { text: "*User report:* Can't access the schedule page", mono: true },
+  { text: "*On Call:* @SLACK_USER", mono: true },
   { text: "" },
   {
     text: "**Slack Thread:** https://company.slack.com/archives/C0ALK2GKDB8/p1787...",
@@ -124,27 +154,35 @@ const BEFORE_DETAILS = [
   { label: "Reporter", value: "Dragon" },
   { label: "Priority", value: "Medium" },
   { label: "Labels", value: "(none)", valueClass: "text-[#6b778c] italic" },
-  { label: "Parent", value: "(none)", valueClass: "text-[#6b778c] italic" },
 ];
 
 const AFTER_DESC = [
   { text: "Bug report" },
   { text: "" },
-  { text: "Report details", muted: true },
-  { text: "Datadog RUM Link · Created Sep 10, 2026 11:41 am", muted: true },
-  { text: "Original #TEAM-bug-reports report", muted: true },
-  { text: "" },
-  { text: "User: @Juliana Brito (juliana.brito@onecompany.com)" },
-  { text: "Engineer on-call: @Paulo Calixto (paulo.calixto@onecompany.com)" },
+  { text: "Report details", muted: true, listItem: true },
   {
-    text: "Manually escalated by: @Juliana Brito (juliana.brito@onecompany.com)",
+    text: "Datadog RUM Link · Created Sep 10, 2026 11:41 am",
+    muted: true,
+    listItem: true,
+  },
+  { text: "Original #TEAM-bug-reports report", muted: true, listItem: true },
+  { text: "" },
+  { text: "User: @Reporter (stakeholder@company.com)", listItem: true },
+  {
+    text: "Engineer on-call: @Juliana Brito (juliana.brito@company.com)",
+    listItem: true,
+  },
+  {
+    text: "Manually escalated by: @Juliana Brito (juliana.brito@company.com)",
+    listItem: true,
   },
   { text: "" },
   { text: "Issue reported", muted: true },
-  { text: "Path: / · Environment: PRODUCTION" },
-  { text: "Current vs. expected: TEST prod ignore" },
-  { text: "Stakeholders: Media Streaming" },
-  { text: "Recurrence: Is happening repeatedly" },
+  { text: "Path: /", listItem: true },
+  { text: "Environment: PRODUCTION", listItem: true },
+  { text: "Current vs. expected: TEST prod ignore", listItem: true },
+  { text: "Stakeholders: Media Streaming", listItem: true },
+  { text: "Recurrence: Is happening repeatedly", listItem: true },
 ];
 
 const AFTER_DETAILS = [
@@ -157,11 +195,6 @@ const AFTER_DETAILS = [
     valueClass: "font-semibold text-orange-600",
   },
   { label: "Labels", value: "dragon-escalation", valueClass: "text-[#0052cc]" },
-  {
-    label: "Parent",
-    value: "🎯 Bug Reports EPIC",
-    valueClass: "text-[#0052cc]",
-  },
 ];
 
 export default function Slide11TicketQuality() {
@@ -182,10 +215,11 @@ export default function Slide11TicketQuality() {
           <Reveal step={1} className="h-full">
             <JiraTicket
               issueKey="JIRA-3437"
-              summary="[TEAM] @U0AM4H9CEA1 bug"
+              summary="[TEAM] @U0AM4H9CEA1"
               descriptionRows={BEFORE_DESC}
               details={BEFORE_DETAILS}
               labelId="s11-before"
+              parent="Add Parent EPIC"
             />
           </Reveal>
         </div>
@@ -197,10 +231,11 @@ export default function Slide11TicketQuality() {
           <Reveal step={2} className="h-full">
             <JiraTicket
               issueKey="JIRA-3508"
-              summary="[On-call] Segment Control Board — empty list blocking live class producers"
+              summary="[on-call] AI summary of the bug"
               descriptionRows={AFTER_DESC}
               details={AFTER_DETAILS}
               labelId="s11-after"
+              parent="🎯 Bug Reports EPIC"
             />
           </Reveal>
         </div>
