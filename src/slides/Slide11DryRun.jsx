@@ -38,7 +38,7 @@ export default function Slide11DryRun() {
         </div>
 
         <Reveal step={1}>
-          <BugReportFormMock showTestMode isDryRun />
+          <BugReportFormMock showTestMode empty />
         </Reveal>
       </div>
     </SlideShell>

@@ -55,7 +55,7 @@ export default function Slide14StatusNotifications() {
         </SectionLabel>
 
         <div className="flex w-full items-stretch gap-3">
-          <Reveal step={1} className="flex min-w-0 flex-1">
+          <div className="flex min-w-0 flex-1">
             <SlackCardShell className="flex-1">
               <SlackBotHeader name="AI Bot" time="11:33 AM" />
               <div className="text-[#d1d2d3]">
@@ -104,9 +104,9 @@ export default function Slide14StatusNotifications() {
                 </ul>
               </div>
             </SlackCardShell>
-          </Reveal>
+          </div>
 
-          <Reveal step={2} className="flex min-w-0 flex-1 items-stretch gap-3">
+          <Reveal step={1} className="flex min-w-0 flex-1 items-stretch gap-3">
             <FlowArrow />
             <SlackCardShell className="flex-1">
               <SlackBotHeader name="AI Bot" time="2:18 PM" />
@@ -130,7 +130,7 @@ export default function Slide14StatusNotifications() {
             </SlackCardShell>
           </Reveal>
 
-          <Reveal step={3} className="flex min-w-0 flex-1 items-stretch gap-3">
+          <Reveal step={2} className="flex min-w-0 flex-1 items-stretch gap-3">
             <FlowArrow />
             <SlackCardShell className="flex-1">
               <SlackBotHeader name="AI Bot" time="2:33 PM" />

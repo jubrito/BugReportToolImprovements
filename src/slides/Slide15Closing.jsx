@@ -23,17 +23,15 @@ export default function Slide15Closing() {
         <span className="italic text-teal-soft">by humans and AIs</span>
       </SlideHeading>
 
-      <Reveal step={1}>
-        <ul className="mb-8 flex flex-wrap justify-center gap-2.5 list-none p-0 m-0">
-          {PILLS.map((p) => (
-            <li key={p.label}>
-              <Pill dotColor={p.dot}>{p.label}</Pill>
-            </li>
-          ))}
-        </ul>
-      </Reveal>
+      <ul className="mb-8 flex flex-wrap justify-center gap-2.5 list-none p-0 m-0">
+        {PILLS.map((p) => (
+          <li key={p.label}>
+            <Pill dotColor={p.dot}>{p.label}</Pill>
+          </li>
+        ))}
+      </ul>
 
-      <Reveal step={2}>
+      <Reveal step={1}>
         <p className="text-[0.85rem] text-text-muted">
           <span className="font-bold">Coming soon:</span> Automated AI-powered
           triage and prioritization

@@ -1,6 +1,17 @@
 import { useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
+const EMPTY = {
+  currentVsExpected: "",
+  isBlocker: "",
+  impactScope: "",
+  hasWorkaround: "",
+  workarounds: "",
+  stakeholders: [],
+  recurrence: "",
+  additionalDetails: "",
+};
+
 const NORMAL_DATA = {
   currentVsExpected:
     "The Segment Control Board shows an empty list; all segments should be visible and selectable.",
@@ -593,9 +604,10 @@ export default function BugReportFormMock({
   showTestMode = false,
   isDryRun: initialDryRun = false,
   original = false,
+  empty = false,
 }) {
   const [isDryRun, setIsDryRun] = useState(initialDryRun);
-  const initial = initialDryRun ? TEST_DATA : NORMAL_DATA;
+  const initial = initialDryRun ? TEST_DATA : empty ? EMPTY : NORMAL_DATA;
 
   const [currentVsExpected, setCurrentVsExpected] = useState(
     initial.currentVsExpected,
@@ -616,7 +628,7 @@ export default function BugReportFormMock({
   const handleTestModeToggle = () => {
     const next = !isDryRun;
     setIsDryRun(next);
-    const d = next ? TEST_DATA : NORMAL_DATA;
+    const d = next ? TEST_DATA : empty ? EMPTY : NORMAL_DATA;
     setCurrentVsExpected(d.currentVsExpected);
     setIsBlocker(d.isBlocker);
     setImpactScope(d.impactScope);

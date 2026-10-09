@@ -46,7 +46,7 @@ export default function Slide4Solution() {
 
       <div className="grid items-start gap-11 md:grid-cols-[1.5fr_1fr]">
         <div>
-          <p className="mb-4 text-base leading-[1.7] text-text-muted">
+          <p className="mb-7 text-base leading-[1.7] text-text-muted">
             Structured questionnaire inside the Bug Report dialog to highlight
             which type of information helps the engineers on-call triage the
             bug.{" "}
@@ -73,10 +73,7 @@ export default function Slide4Solution() {
                 </CheckItem>
               ))}
             </CheckList>
-          </Reveal>
-
-          <Reveal step={2}>
-            <aside className="mt-2 rounded-xl border-[1.5px] border-green-soft bg-green-softer p-5 text-[0.95rem] leading-[1.6] text-text">
+            <aside className="mt-7 rounded-xl border-[1.5px] border-green-soft bg-green-softer p-5 text-[0.95rem] leading-[1.6] text-text">
               <p className="mb-2 text-[1.2rem] font-bold text-green">
                 All fields optional except "current vs. expected"
               </p>
@@ -92,7 +89,7 @@ export default function Slide4Solution() {
           </Reveal>
         </div>
 
-        <Reveal step={3}>
+        <Reveal step={2}>
           <SlackMock />
         </Reveal>
       </div>

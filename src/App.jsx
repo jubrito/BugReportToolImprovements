@@ -33,7 +33,7 @@ const SLIDES = [
   { Component: Slide9Reaction, maxStep: 2 },
   { Component: Slide10Team, maxStep: 4 },
   { Component: Slide11DryRun, maxStep: 1 },
-  { Component: Slide12TicketQuality, maxStep: 2 },
+  { Component: Slide12TicketQuality, maxStep: 4 },
   { Component: Slide13SlackReplies, maxStep: 3 },
   { Component: Slide14StatusNotifications, maxStep: 3 },
   { Component: Slide15Closing, maxStep: 2 },

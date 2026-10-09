@@ -37,15 +37,17 @@ export default function Slide13SlackReplies() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {/* Thread messages column */}
         <div className="flex flex-col gap-3">
-          <SectionLabel>
-            <EscalationRequestLabel /> Reply to AI Bot Channel post
-          </SectionLabel>
+          <Reveal step={1}>
+            <SectionLabel>
+              <EscalationRequestLabel /> Reply to AI Bot Channel post
+            </SectionLabel>
+          </Reveal>
 
           {/* After thread */}
-          <Reveal step={2}>
+          <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-2">
-              <div className="flex flex-col gap-2">
-                {/* Ack (new) */}
+              {/* Ack (new) */}
+              <Reveal step={1}>
                 <SlackCardShell>
                   <AIBotHeader />
                   <div className="text-[#d1d2d3]">
@@ -61,7 +63,7 @@ export default function Slide13SlackReplies() {
                         decoding="async"
                       />
                       <span className="font-bold text-md">
-                        Ticket creation request received! [prod]
+                        [prod] Ticket creation request received!
                       </span>
                     </p>
                     <ul className="list-disc flex flex-col gap-2">
@@ -99,9 +101,12 @@ export default function Slide13SlackReplies() {
                     </ul>
                   </div>
                 </SlackCardShell>
+              </Reveal>
 
+              <Reveal step={2}>
                 <SlackThreadDivider replyCount={1} />
-
+              </Reveal>
+              <Reveal step={2}>
                 {/* Success reply */}
                 <SlackCardShell>
                   <AIBotHeader />
@@ -118,7 +123,7 @@ export default function Slide13SlackReplies() {
                         decoding="async"
                       />
                       <span className="font-bold">
-                        Ticket creation request succeeded ✅ [prod]
+                        [prod] Ticket creation request succeeded ✅
                       </span>
                     </p>
                     <ul className="list-disc flex flex-col gap-2">
@@ -140,24 +145,25 @@ export default function Slide13SlackReplies() {
                     </ul>
                   </div>
                 </SlackCardShell>
-              </div>
+              </Reveal>
             </div>
-          </Reveal>
+          </div>
         </div>
 
         {/* Eng channel post column */}
-        <div className="flex flex-col gap-3">
-          <SectionLabel>
-            <AIBotEscalationPostLabel /> Post to AI Bot Channel
-          </SectionLabel>
+        <Reveal step={3}>
+          <div className="flex flex-col gap-3">
+            <SectionLabel>
+              <AIBotEscalationPostLabel /> Post to AI Bot Channel
+            </SectionLabel>
 
-          {/* After eng post */}
-          <Reveal step={2}>
+            {/* After eng post */}
             <div className="flex flex-col gap-2">
               <SlackCardShell>
                 <AIBotHeader />
                 <div className="text-[#d1d2d3]">
                   <p className="mb-2 font-bold text-white flex items-start">
+                    <span className="mr-1">[prod]</span>
                     <img
                       src={`${import.meta.env.BASE_URL}astronaut.gif`}
                       alt=""
@@ -170,7 +176,6 @@ export default function Slide13SlackReplies() {
                     />
                     New Escalation:{" "}
                     <span className="ml-1 text-teal underline">JIRA-3585</span>
-                    <span className="ml-1">[prod]</span>
                   </p>
                   <ul className="list-disc flex flex-col gap-2">
                     <li className="ml-4">
@@ -212,8 +217,8 @@ export default function Slide13SlackReplies() {
                 </div>
               </SlackCardShell>
             </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </SlideShell>
   );

@@ -2,6 +2,7 @@ import BugReportFormMock from "../components/BugReportFormMock";
 import Eyebrow from "../components/Eyebrow";
 import SlideHeading from "../components/SlideHeading";
 import SlideShell from "../components/SlideShell";
+import Reveal from "../presentation/Reveal";
 
 export default function Slide2UXImprovement() {
   return (
@@ -13,14 +14,16 @@ export default function Slide2UXImprovement() {
             Bug Reporting
             <em className="block">form enrichment</em>
           </SlideHeading>
-          <p className="mb-3 mb-10 text-[1rem] leading-[1.65]">
+          <p className={`mb-3 mb-10 text-[1rem] leading-[1.65]`}>
             How the bug reporting tool looks before and after it was refactored.
           </p>
 
           <BugReportFormMock original />
         </div>
         <span>→</span>
-        <BugReportFormMock />
+        <Reveal step={1}>
+          <BugReportFormMock />
+        </Reveal>
       </div>
     </SlideShell>
   );

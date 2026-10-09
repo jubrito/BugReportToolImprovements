@@ -140,7 +140,7 @@ export default function Slide5Efficiency() {
         to a more <em>efficient triage</em>
       </SlideHeading>
 
-      <Reveal step={1} className="w-full">
+      <div className="w-full">
         <div className="mb-9 grid w-full items-stretch gap-5 grid-cols-[1fr_auto_1fr]">
           <StatsRow items={STATS_BEFORE} />
           <span
@@ -151,10 +151,10 @@ export default function Slide5Efficiency() {
           </span>
           <StatsRow items={STATS_AFTER} />
         </div>
-      </Reveal>
+      </div>
 
       <div className="grid grid-cols-1 gap-20 md:grid-cols-2">
-        <Reveal step={2} className="h-full">
+        <Reveal step={1} className="h-full">
           <BACard tone="beforeTinted" label="Before" labelId="s4-before">
             <IconList>
               {BEFORE_ITEMS.map((item) => (
@@ -165,7 +165,7 @@ export default function Slide5Efficiency() {
             </IconList>
           </BACard>
         </Reveal>
-        <Reveal step={3} className="h-full">
+        <Reveal step={2} className="h-full">
           <BACard tone="afterTinted" label="After" labelId="s4-after">
             <IconList>
               {AFTER_ITEMS.map((item) => (

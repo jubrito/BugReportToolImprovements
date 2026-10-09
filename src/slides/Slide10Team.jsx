@@ -22,8 +22,7 @@ const TEAM = [
     role: "Software Engineer",
     accent: "pink",
     contributions: [
-      "Helped to make user experience smoother while maximizing issue context retrieval",
-      "Introduced the form buttons layout",
+      "Introduced the form buttons layout that helped to make user experience smoother while maximizing issue context retrieval",
       "Reviewed code to speed up feature delivery",
     ],
   },

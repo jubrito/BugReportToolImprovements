@@ -6,8 +6,8 @@ import IconList, { IconListItem, SubText } from "../components/IconList";
 import Reveal from "../presentation/Reveal";
 
 const FLOW_STEPS = [
-  { label: "User reports a problem using our tool", alert: false },
-  { label: "Bug report submitted is incomplete", alert: true },
+  { label: "User reports a problem using the bug report tool", alert: false },
+  { label: "Bug report submitted is often incomplete", alert: true },
   { label: "On-call needs more\ncontext to triage", alert: true },
   { label: "Multiple follow-up\nquestions required", alert: true },
   { label: "Triage finally\nbegins", alert: false },
@@ -74,7 +74,7 @@ export default function Slide3Problem() {
         multiple rounds of <em>back-and-forth</em>
       </SlideHeading>
 
-      <Reveal step={1} as="div" className="w-full">
+      <div className="w-full">
         <ol
           aria-label="Report to triage flow"
           className="my-7 flex w-full flex-wrap items-center gap-2.5 list-none p-0"
@@ -104,10 +104,10 @@ export default function Slide3Problem() {
             </li>
           ))}
         </ol>
-      </Reveal>
+      </div>
 
       <div className="mt-1 grid w-full flex-1 gap-5 grid-cols-1 md:grid-cols-[1fr_1.3fr]">
-        <Reveal step={2} className="w-full h-full">
+        <Reveal step={1} className="w-full h-full">
           <BACard
             tone="before"
             label='Incomplete "user reports" are common'
@@ -131,7 +131,7 @@ export default function Slide3Problem() {
           </BACard>
         </Reveal>
 
-        <Reveal step={3} className="w-full h-full">
+        <Reveal step={2} className="w-full h-full">
           <BACard
             tone="before"
             label="Important context is often not shared"

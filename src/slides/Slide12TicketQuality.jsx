@@ -205,11 +205,11 @@ export default function Slide12TicketQuality() {
       </SlideHeading>
 
       <div className="grid w-full items-stretch gap-x-4 grid-cols-[1fr_auto_1fr_1px_auto]">
-        <div className="flex flex-col gap-1.5">
+        <Reveal step={1} className="flex flex-col gap-1.5">
           <p className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-pink">
             Before — JIRA-3437
           </p>
-          <Reveal step={1} className="h-full">
+          <div className="h-full">
             <JiraTicket
               issueKey="JIRA-3437"
               summary="[TEAM] @U0AM4H9CEA1"
@@ -218,21 +218,21 @@ export default function Slide12TicketQuality() {
               labelId="s11-before"
               parent="Add Parent EPIC"
             />
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
 
-        <span
-          aria-hidden="true"
+        <Reveal
+          step={2}
           className="flex items-center justify-center text-[2.5rem] font-bold text-text-muted"
         >
-          →
-        </span>
+          <span aria-hidden="true">→</span>
+        </Reveal>
 
-        <div className="flex flex-col gap-1.5">
+        <Reveal step={3} className="flex flex-col gap-1.5">
           <p className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-teal">
             After — JIRA-3508
           </p>
-          <Reveal step={2} className="h-full">
+          <div className="h-full">
             <JiraTicket
               issueKey="JIRA-3508"
               summary="[on-call] AI summary of the bug"
@@ -241,12 +241,12 @@ export default function Slide12TicketQuality() {
               labelId="s11-after"
               parent="🎯 Bug Reports EPIC"
             />
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
 
         <div aria-hidden="true" className="self-stretch" />
 
-        <Reveal step={3} className="self-start">
+        <Reveal step={4} className="self-start">
           <p
             aria-hidden="true"
             className="opacity-0 mb-2 text-[0.78rem] font-bold uppercase tracking-[0.1em]"
