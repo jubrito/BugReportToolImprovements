@@ -7,14 +7,14 @@ import {
 const REPLY_ROWS = [
   [
     "Blocked users, teams or operations",
-    "Live class in progress. Affects all producers on the 6am shift",
+    "Live event in progress. Affects all operators on the morning shift",
   ],
-  ["Known workarounds", "Yes. Re-importing the class plan"],
-  ["Stakeholders", "Studio, Media Streaming"],
+  ["Known workarounds", "Yes. Re-importing the item plan"],
+  ["Stakeholders", "Content, Video Platform"],
   ["Recurrence", "Is happening repeatedly"],
   [
     "Additional details",
-    "Started after the deploy. Steps to reproduce: class library → class tool.",
+    "Started after the deploy. Steps to reproduce: item library → item tool.",
   ],
 ];
 
@@ -32,21 +32,21 @@ export default function SlackMock() {
           <br />
           <span className="font-bold text-white">Environment:</span> PRODUCTION
           <br />
-          <span className="font-bold text-white">Path:</span> /programs
+          <span className="font-bold text-white">Path:</span> /items
           <br />
           <span className="font-bold text-white">User:</span>{" "}
-          reporter@onecompany.com
+          reporter@example.com
           <br />
           <span className="font-bold text-white">
             Current vs. expected behavior:
           </span>{" "}
-          The Segment Control Board should show all segments, but the list is
+          The Control Board should show all items, but the list is
           empty.
           <br />
           <span className="font-bold text-white">
             Business Hours On Call:
           </span>{" "}
-          @Juliana
+          @Engineer
         </div>
       </SlackCardShell>
 

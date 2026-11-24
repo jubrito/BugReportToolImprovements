@@ -14,7 +14,7 @@ const CHECK_ITEMS = [
   {
     title: "What/who is impacted or blocked",
     badge: "supports prioritization",
-    body: "Is it only affecting the reporter? Is it blocking a live class in progress?",
+    body: "Is it only affecting the reporter? Is it blocking a live event in progress?",
   },
   {
     title: "Known workaround",

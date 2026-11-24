@@ -20,7 +20,7 @@ const MISSING_INFO = [
   },
   {
     main: "Is it blocking anything time-sensitive?",
-    sub: 'A live class incident is P0. "Just me" can wait. Unknown = treat everything as urgent.',
+    sub: 'A live event incident is P0. "Just me" can wait. Unknown = treat everything as urgent.',
   },
   {
     main: "Is there a workaround?",

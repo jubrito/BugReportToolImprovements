@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import SlackMock from "./SlackMock";
+import { SlackThreadDivider } from "./SlackCard";
 
 describe("SlackMock", () => {
   it("renders the bot header (twice — one per card)", () => {
@@ -25,7 +26,16 @@ describe("SlackMock", () => {
 
   it("includes the '1 reply' divider", () => {
     render(<SlackMock />);
-    expect(screen.getByText(/1 reply/i)).toBeInTheDocument();
+    const divider = screen.getByText(/1 reply/i);
+    expect(divider).toHaveClass("flex", "items-center", "justify-center", "gap-1");
+    expect(divider.querySelector("svg")).toHaveAttribute("aria-hidden", "true");
+  });
+
+  it("keeps the shared divider centered for multiple replies", () => {
+    render(<SlackThreadDivider replyCount={3} />);
+    const divider = screen.getByText("3 replies");
+    expect(divider).toHaveClass("flex", "items-center", "justify-center", "gap-1");
+    expect(divider.querySelector("svg")).toHaveAttribute("aria-hidden", "true");
   });
 
   it("marks the bot avatar as decorative", () => {

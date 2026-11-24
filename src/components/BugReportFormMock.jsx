@@ -14,15 +14,15 @@ const EMPTY = {
 
 const NORMAL_DATA = {
   currentVsExpected:
-    "The Segment Control Board shows an empty list; all segments should be visible and selectable.",
+    "The Control Board shows an empty list; all items should be visible and selectable.",
   isBlocker: "block",
-  impactScope: "Live class in progress",
+  impactScope: "Live event in progress",
   hasWorkaround: "Yes",
-  workarounds: "Re-importing the class plan",
-  stakeholders: ["Studio", "Media Streaming"],
+  workarounds: "Re-importing the item plan",
+  stakeholders: ["Content", "Video Platform"],
   recurrence: "Has happened occasionally",
   additionalDetails:
-    "Started after the latest deploy. Steps to reproduce: class library → open class tool.",
+    "Started after the latest deploy. Steps to reproduce: item library → open item tool.",
 };
 
 const TEST_DATA = {
@@ -31,7 +31,7 @@ const TEST_DATA = {
   impactScope: "Just me",
   hasWorkaround: "Yes",
   workarounds: "TEST workarounds",
-  stakeholders: ["Studio", "Other"],
+  stakeholders: ["Content", "Other"],
   stakeholdersDetails: "TEST stakeholders",
   recurrence: "First time for me",
   additionalDetails: "TEST additional details",
@@ -40,8 +40,8 @@ const TEST_DATA = {
 const IMPACT_SCOPE_OPTIONS = [
   "Just me",
   "Upcoming deadline",
-  "Class drop/publish/update",
-  "Live class in progress",
+  "Item publish/update",
+  "Live event in progress",
   "Not sure",
   "Other",
 ];
@@ -49,17 +49,17 @@ const IMPACT_SCOPE_OPTIONS = [
 const IMPACT_SCOPE_WEIGHTS = {
   "Just me": "low",
   "Upcoming deadline": "medium",
-  "Class drop/publish/update": "high",
-  Studio: "high",
-  "Live class in progress": "critical",
+  "Item publish/update": "high",
+  Content: "high",
+  "Live event in progress": "critical",
 };
 
 const STAKEHOLDER_OPTIONS = [
-  "Media",
-  "Media Streaming",
-  "Programming",
-  "Music",
-  "Studio",
+  "Content",
+  "Video Platform",
+  "Scheduling",
+  "Audio",
+  "Operations",
   "Other",
 ];
 
@@ -190,7 +190,7 @@ function ToggleGroup({ options, value, onChange, labelFn, thin }) {
   );
 }
 
-// Blue info tooltip icon matching TEAMToolTip.
+// Blue info tooltip icon matching teamToolTip.
 // Uses a portal so the tooltip renders at document root, escaping any overflow:hidden container.
 function HintIcon({ title }) {
   const iconRef = useRef(null);
@@ -900,7 +900,7 @@ export default function BugReportFormMock({
           }}
         >
           {isDryRun
-            ? "[Test mode] Report not sent to #TEAM-bug-reports — sent to #TEAM-AI Bot-eng only."
+            ? "[Test mode] Report not sent to #team-bug-reports — sent to #team-AI Bot-eng only."
             : 'By clicking "Send Report", your report will be sent to the appropriate slack channel including a screen recording link.'}
         </p>
         <div style={{ display: "flex", justifyContent: "flex-end", gap: 8 }}>

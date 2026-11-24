@@ -68,7 +68,7 @@ export default function Slide1Title() {
             <strong>better human and AI-assisted investigations.</strong>
           </p>
           <p className="mt-3.5 text-[1.15rem] italic text-text-muted">
-            Juliana Witzke · Fabio Pinto · Paulo Calixto
+            Engineer A · Engineer B · Engineer C
           </p>
         </div>
 

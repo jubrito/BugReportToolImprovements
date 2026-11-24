@@ -112,7 +112,7 @@ function JiraTicket({
 }
 
 const BEFORE_DESC = [
-  { text: "**User:** user@onecompany.com", mono: true },
+  { text: "**User:** user@example.com", mono: true },
   { text: "**Platform:** NAME", mono: true },
   { text: "**Created:** 2026-08-25T19:59:40Z", mono: true },
   { text: "" },
@@ -121,12 +121,12 @@ const BEFORE_DESC = [
   { text: "" },
   { text: "**Conversation Transcript:**", mono: true },
   { text: "[2026-08-25T19:59:40Z] BOT:", mono: true },
-  { text: "<https://TEAM-stage.company.com/|*TEAM Link*>", mono: true },
+  { text: "<https://team-stage.example.com/|*Team Link*>", mono: true },
   { text: "*User report:* Can't access the schedule page", mono: true },
   { text: "*On Call:* @SLACK_USER", mono: true },
   { text: "" },
   {
-    text: "**Slack Thread:** https://company.slack.com/archives/C0ALK2GKDB8/p1787...",
+    text: "**Slack Thread:** https://example.slack.com/archives/CXXXXXXXXXX/pXXXX...",
     mono: true,
   },
 ];
@@ -152,15 +152,15 @@ const AFTER_DESC = [
     muted: true,
     listItem: true,
   },
-  { text: "Original #TEAM-bug-reports report", muted: true, listItem: true },
+  { text: "Original #Team-bug-reports report", muted: true, listItem: true },
   { text: "" },
-  { text: "User: @Reporter (stakeholder@company.com)", listItem: true },
+  { text: "User: @Reporter (stakeholder@example.com)", listItem: true },
   {
-    text: "Engineer on-call: @Juliana Brito (juliana.brito@company.com)",
+    text: "Engineer on-call: @Engineer (engineer@example.com)",
     listItem: true,
   },
   {
-    text: "Manually escalated by: @Juliana Brito (juliana.brito@company.com)",
+    text: "Manually escalated by: @Engineer (engineer@example.com)",
     listItem: true,
   },
   { text: "" },
@@ -168,7 +168,7 @@ const AFTER_DESC = [
   { text: "Path: /", listItem: true },
   { text: "Environment: PRODUCTION", listItem: true },
   { text: "Current vs. expected: TEST prod ignore", listItem: true },
-  { text: "Stakeholders: Media Streaming", listItem: true },
+  { text: "Stakeholders: Video Platform", listItem: true },
   { text: "Recurrence: Is happening repeatedly", listItem: true },
 ];
 
@@ -212,7 +212,7 @@ export default function Slide12TicketQuality() {
           <div className="h-full">
             <JiraTicket
               issueKey="JIRA-3437"
-              summary="[TEAM] @U0AM4H9CEA1"
+              summary="[Team] @UXXXXXXXXXX"
               descriptionRows={BEFORE_DESC}
               details={BEFORE_DETAILS}
               labelId="s11-before"

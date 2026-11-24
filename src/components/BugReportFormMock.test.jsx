@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import BugReportFormMock from "./BugReportFormMock";
 
 const normalBehavior =
-  "The Segment Control Board shows an empty list; all segments should be visible and selectable.";
+  "The Control Board shows an empty list; all items should be visible and selectable.";
 const testBehavior = "TEST current vs. expected behavior";
 
 describe("BugReportFormMock", () => {
@@ -66,7 +66,7 @@ describe("BugReportFormMock", () => {
         });
       } else {
         expect(
-          screen.getByDisplayValue("Re-importing the class plan"),
+          screen.getByDisplayValue("Re-importing the item plan"),
         ).toBeInTheDocument();
       }
       expect(

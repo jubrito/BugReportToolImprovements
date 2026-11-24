@@ -71,7 +71,7 @@ export default function Slide14StatusNotifications() {
                       <span className="font-bold text-[#ececed]">
                         Reporter:
                       </span>{" "}
-                      Reporter Name (reporter@onecompany.com)
+                      Reporter Name (reporter@example.com)
                     </p>
                   </li>
                   <li className="ml-4">
@@ -89,7 +89,7 @@ export default function Slide14StatusNotifications() {
                       <span className="font-bold text-[#ececed]">
                         AI assessment:
                       </span>{" "}
-                      Ride details page is possibly checking the image size
+                      Item details page is possibly checking the image size
                       instead of the image requirements and throwing an error
                       notification that don't align with the actual
                       requirements.

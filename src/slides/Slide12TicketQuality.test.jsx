@@ -29,7 +29,7 @@ describe("Slide12TicketQuality", () => {
     const arrow = screen.getByText("\u2192").parentElement;
     const improvements = screen.getByText("What improved").parentElement;
 
-    expect(before).toContainElement(screen.getByText("[TEAM] @U0AM4H9CEA1"));
+    expect(before).toContainElement(screen.getByText("[Team] @UXXXXXXXXXX"));
     expect(after).toContainElement(
       screen.getByText("[on-call] AI summary of the bug"),
     );

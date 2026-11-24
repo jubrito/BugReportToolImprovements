@@ -7,7 +7,7 @@ import Reveal from "../presentation/Reveal";
 
 const TEAM = [
   {
-    name: "Juliana Witzke",
+    name: "Engineer A",
     role: "Software Engineer",
     accent: "purple",
     contributions: [
@@ -18,7 +18,7 @@ const TEAM = [
     ],
   },
   {
-    name: "Fabio Pinto",
+    name: "Engineer B",
     role: "Software Engineer",
     accent: "pink",
     contributions: [
@@ -27,7 +27,7 @@ const TEAM = [
     ],
   },
   {
-    name: "Paulo Calixto",
+    name: "Engineer C",
     role: "Software Engineer",
     accent: "amber",
     contributions: [

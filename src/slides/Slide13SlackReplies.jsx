@@ -84,10 +84,10 @@ export default function Slide13SlackReplies() {
                           <span className="font-semibold text-[#ececed]">
                             Reasoning:
                           </span>{" "}
-                          Studio team is blocked because users can't change ride
-                          images. When uploading an image with the correct
+                          Content team is blocked because users can't change
+                          item images. When uploading an image with the correct
                           requirements, they still encounter an error that
-                          prevents the class thumbnail upload.
+                          prevents the item thumbnail upload.
                         </p>
                       </li>
                       <li className="ml-4">
@@ -183,7 +183,7 @@ export default function Slide13SlackReplies() {
                         <span className="font-bold text-[#ececed]">
                           Reporter:
                         </span>{" "}
-                        Reporter Name (reporter@onecompany.com)
+                        Reporter Name (reporter@example.com)
                       </p>
                     </li>
                     <li className="ml-4">
@@ -201,7 +201,7 @@ export default function Slide13SlackReplies() {
                         <span className="font-bold text-[#ececed]">
                           AI assessment:
                         </span>{" "}
-                        Ride details page is possibly checking the image size
+                        Item details page is possibly checking the image size
                         instead of the image requirements and throwing an error
                         notification that don't align with the actual
                         requirements.
