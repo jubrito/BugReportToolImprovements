@@ -4,5 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss()],
-  base: command === "build" ? "/BugReportTool/" : "/",
+  base: command === "build" ? "/BugReportToolImprovements/" : "/",
 }));
